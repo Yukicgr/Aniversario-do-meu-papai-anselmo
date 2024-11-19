@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário, Pai!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Feliz Aniversário, Pai! 🎉</h1>
+    </header>
+    <section class="photos">
+        <img src="foto1.jpg" alt="Foto 1" />
+        <img src="foto2.jpg" alt="Foto 2" />
+        <img src="foto3.jpg" alt="Foto 3" />
+    </section>
+    <section class="message">
+        <h2>Minha mensagem especial para você:</h2>
+        <p>
+            Hoje é um dia muito especial: é o seu aniversário, e eu decidi fazer isso para comemorar. Eu queria me abrir para você e mostrar o meu carinho e amor por você, pois você é o melhor pai para mim. Você sempre me ajuda e é muito bom comigo. Sempre que eu peço algo, você tenta me ajudar, e eu fico muito grato por isso.
+
+Eu queria tanto te agradecer por ser o meu querido pai. Mesmo que eu tivesse mil vidas, eu escolheria em todas elas apenas você, pois você é o melhor pai do mundo. Eu te amo tanto, mas tanto! Você é o que eu tenho de mais valioso, e eu nunca quero perder você.
+
+Estou fazendo esse texto chorando, pois estou emocionado por abrir os meus sentimentos para você. Eu não sou muito de mostrar o que sinto, mas espero que você esteja ficando feliz com esse texto. Eu não sou de fazer textos, mas este estou fazendo com muito amor e carinho, pois você merece muito, mesmo.
+
+Você é o meu maior exemplo, a minha inspiração. Eu gosto de tudo em você. Até mesmo nos seus erros, como quando você grita, eu te entendo e sempre vou perdoar, pois todo mundo tem seus pontos fracos. Mas, para mim, seus pontos positivos brilham muito mais: seu carinho, seu amor, sua lealdade e o carinho por mim são muitas coisas que admiro.
+
+Aqui eu termino esse texto e espero que você tenha gostado, pois fiz com muito carinho e felicidade em meu coração. Você merece tudo isso. Feliz aniversário, papai!
+        </p>
+    </section>
+    <footer>
+        <p>Com muito carinho, feito por seu amado filho, Gabriel. 💙</p>
+    </footer>
+
+    <!-- Script para fogos de artifício -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        // Função para disparar os fogos
+        function dispararFogos() {
+            const duracao = 5 * 1000; // 5 segundos
+            const fim = Date.now() + duracao;
+
+            (function estourar() {
+                confetti({
+                    particleCount: 50,
+                    startVelocity: 30,
+                    spread: 360,
+                    ticks: 60,
+                    origin: {
+                        x: Math.random(),
+                        y: Math.random() - 0.2
+                    }
+                });
+
+                if (Date.now() < fim) {
+                    requestAnimationFrame(estourar);
+                }
+            })();
+        }
+
+        // Inicia os fogos ao carregar a página
+        window.onload = dispararFogos;
+    </script>
+</body>
+</html>
